@@ -49,7 +49,7 @@ async def link(ctx):
     info.set_thumbnail(url=ctx.guild.icon_url)
     await ctx.reply("||https://www.youtube.com/channel/UCJI3CLnMBZrh5pZblLmPZpg||", embed=info)
 
-@slash.slash(name="info", description="link 🔗")
+@slash.slash(name="link", description="link 🔗")
 async def link(ctx):
     info = discord.Embed(title="links", colour=0x4472F0)
     info.add_field(name="Aparat:", value="https://www.aparat.com/Darky_DW", inline=False)
