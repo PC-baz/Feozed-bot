@@ -12,6 +12,11 @@ client = commands.Bot(command_prefix='@', help_command=None, intents=intents)
 slash = SlashCommand(client, sync_commands=True)
 
 @client.command()
+async def join(ctx):
+    channel = ctx.author.voice.channel
+    await channel.connect()
+
+@client.command()
 async def help(ctx):
     help = discord.Embed(title="help command",  colour=0x4472F0)
     help.add_field(name="info", value="@info", inline=False)
