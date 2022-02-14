@@ -15,6 +15,7 @@ slash = SlashCommand(client, sync_commands=True)
 async def help(ctx):
     help = discord.Embed(title="help command",  colour=0x4472F0)
     help.add_field(name="info", value="@info", inline=False)
+    help.add_field(name="link", value="@link", inline=False)
     await ctx.reply(embed=help)
 
 @slash.slash(name="help", description="help command❓")
