@@ -41,6 +41,22 @@ async def info(ctx):
     info.set_thumbnail(url=ctx.guild.icon_url)
     await ctx.send(embed=info)
 
+@client.command()
+async def link(ctx):
+    info = discord.Embed(title="links", colour=0x4472F0)
+    info.add_field(name="Aparat:", value="https://www.aparat.com/Darky_DW", inline=False)
+    info.add_field(name="youtube:", value="https://www.youtube.com/channel/UCJI3CLnMBZrh5pZblLmPZpg", inline=False)
+    info.set_thumbnail(url=ctx.guild.icon_url)
+    await ctx.reply("||https://www.youtube.com/channel/UCJI3CLnMBZrh5pZblLmPZpg||", embed=info)
+
+@slash.slash(name="info", description="link 🔗")
+async def link(ctx):
+    info = discord.Embed(title="links", colour=0x4472F0)
+    info.add_field(name="Aparat:", value="https://www.aparat.com/Darky_DW", inline=False)
+    info.add_field(name="youtube:", value="https://www.youtube.com/channel/UCJI3CLnMBZrh5pZblLmPZpg", inline=False)
+    info.set_thumbnail(url=ctx.guild.icon_url)
+    await ctx.send("||https://www.youtube.com/channel/UCJI3CLnMBZrh5pZblLmPZpg||", embed=info)
+
 @client.event
 async def on_ready():
     print('bot is ready')
