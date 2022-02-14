@@ -44,6 +44,6 @@ async def info(ctx):
 @client.event
 async def on_ready():
     print('bot is ready')
-    await client.change_presence(activity=discord.Game(name="@help | Feozed"))
+    await client.change_presence(activity=discord.Game(name="@help | Darky DW"))
 
 client.run(Token)
