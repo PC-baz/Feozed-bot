@@ -21,6 +21,7 @@ async def help(ctx):
 async def help(ctx):
     help = discord.Embed(title="help command",  colour=0x4472F0)
     help.add_field(name="info", value="@info", inline=False)
+    help.add_field(name="link", value="@link", inline=False)
     await ctx.send(embed=help)
 
 @client.command()
@@ -47,7 +48,7 @@ async def link(ctx):
     info.add_field(name="Aparat:", value="https://www.aparat.com/Darky_DW", inline=False)
     info.add_field(name="youtube:", value="https://www.youtube.com/channel/UCJI3CLnMBZrh5pZblLmPZpg", inline=False)
     info.set_thumbnail(url=ctx.guild.icon_url)
-    await ctx.reply("||https://www.youtube.com/channel/UCJI3CLnMBZrh5pZblLmPZpg||", embed=info)
+    await ctx.reply(embed=info)
 
 @slash.slash(name="link", description="link 🔗")
 async def link(ctx):
@@ -55,7 +56,7 @@ async def link(ctx):
     info.add_field(name="Aparat:", value="https://www.aparat.com/Darky_DW", inline=False)
     info.add_field(name="youtube:", value="https://www.youtube.com/channel/UCJI3CLnMBZrh5pZblLmPZpg", inline=False)
     info.set_thumbnail(url=ctx.guild.icon_url)
-    await ctx.send("||https://www.youtube.com/channel/UCJI3CLnMBZrh5pZblLmPZpg||", embed=info)
+    await ctx.send(embed=info)
 
 @client.event
 async def on_ready():
