@@ -11,6 +11,22 @@ intents = discord.Intents.all()
 client = commands.Bot(command_prefix='@', help_command=None, intents=intents)
 slash = SlashCommand(client, sync_commands=True)
 
+
+@slash.slash(name="create_channel", description="create channel", guild_ids=[843694293708963890])
+async def create_channel(ctx, channel_name):
+	guild = ctx.guild
+	channel = await guild.create_text_channel(channel_name)
+
+
+@client.command()
+async def say(ctx, message=None):
+    await ctx.send(message)
+
+@client.command()
+async def create_channel(ctx, channel_name):
+	guild = ctx.guild
+	channel = await guild.create_text_channel(channel_name)
+
 @client.command()
 async def join(ctx):
     channel = ctx.author.voice.channel
