@@ -1,11 +1,8 @@
-from http import client
-from pydoc import cli
-from tokenize import Token
 import discord
 from discord.ext import commands 
 from discord_slash import SlashCommand
 
-Token = 'OTMyNTYzMjMwNDc4NDYyOTk3.YeUzMA.nNUBVwEOrs68CsuCG6cjlLzva8s'
+Token = ''
 
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix='@', help_command=None, intents=intents)
